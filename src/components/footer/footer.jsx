@@ -1,4 +1,6 @@
 import './footer.css';
+import logoBulma from './assets/made-with-bulma--semiblack.png';
+import logoVercel from './assets/vercel.svg';
 
 /**
  * Mi componente Footer de Bulma.
@@ -17,11 +19,11 @@ function Footer() {
             rel="noopener noreferrer"
           >
             Powered by{' '}
-            <img src="/vercel.svg" alt="Vercel Logo" className="logo" />
+            <img src={logoVercel} alt="Vercel Logo" className="logo" />
           </a>
           <a href="https://bulma.io" target="_blank" rel="noopener noreferrer">
             <img
-              src="/made-with-bulma--semiblack.png"
+              src={logoBulma}
               alt="Made with Bulma"
               width="128"
               height="24" />
