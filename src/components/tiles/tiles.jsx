@@ -1,151 +1,81 @@
+import TileChild from "./tile-child";
+
 /**
- * Mi componente Tile de Bulma.
- * @param {Object} props Propiedades pasadas desde arriba.
+ * Mi componente Tiles de Bulma.
+ * @param {Object} props Propiedes pasadas desde arriba.
  */
-const Tile = (props) => {
+const Tiles = (props) => {
+  let myTime = new Date();
+
+  const getLocaleTimeString = (time) => {
+    myTime.setHours(time.h, time.m, time.s);
+
+    if (time.add > 0) {
+      myTime.setMinutes(myTime.getMinutes() + time.add);
+    }
+    const startTime = myTime.toLocaleTimeString([], { timeStyle: 'short' });
+    myTime.setMinutes(myTime.getMinutes() + 30);
+    const endTime = myTime.toLocaleTimeString([], { timeStyle: 'short' });
+
+    return `${startTime} - ${endTime}`;
+  }
+
+  const renderTileChild = (i, time) => {
+    return (
+      <TileChild
+        onClick={() => props.onClick(i)}
+        pContent={getLocaleTimeString(time)}
+        color={props.color}
+        i={i}
+      />
+    );
+  }
+
   return (
     <div className="tile is-ancestor">
-
-      <div className="tile is-2 is-vertical is-parent has-text-centered is-size-7 has-text-weight-medium">
-        <div className="tile is-child box is-clickable">
-          <div className="content">
-            <p>8:00 a.m. - 8:30 a.m.</p>
-          </div>
-        </div>
-        <div className="tile is-child box is-clickable">
-          <div className="content">
-            <p>8:30 a.m. - 9:00 a.m.</p>
-          </div>
-        </div>
-        <div className="tile is-child box is-clickable">
-          <div className="content">
-            <p>9:00 a.m. - 9:30 a.m.</p>
-          </div>
-        </div>
-        <div className="tile is-child box is-clickable">
-          <div className="content">
-            <p>9:30 a.m. - 10:00 a.m.</p>
-          </div>
-        </div>
+      <div className="tile is-2 is-vertical is-parent has-text-centered">
+        {renderTileChild(0, {h:8, m:0, s:0, add:0})}
+        {renderTileChild(1, {h:8, m:0, s:0, add:30})}
+        {renderTileChild(2, {h:8, m:0, s:0, add:60})}
+        {renderTileChild(3, {h:8, m:0, s:0, add:90})}
       </div>
 
-      <div className="tile is-2 is-vertical is-parent has-text-centered is-size-7 has-text-weight-medium">
-        <div className="tile is-child box is-clickable">
-          <div className="content">
-            <p>10:00 a.m. - 10:30 a.m.</p>
-          </div>
-        </div>
-        <div className="tile is-child box is-clickable">
-          <div className="content">
-            <p>10:30 a.m. - 11:00 a.m.</p>
-          </div>
-        </div>
-        <div className="tile is-child box is-clickable">
-          <div className="content">
-            <p>11:00 a.m. - 11:30 a.m.</p>
-          </div>
-        </div>
-        <div className="tile is-child box is-clickable">
-          <div className="content">
-            <p>11:30 a.m. - 12:00 p.m.</p>
-          </div>
-        </div>
+      <div className="tile is-2 is-vertical is-parent has-text-centered">
+        {renderTileChild(4, {h:8, m:0, s:0, add:120})}
+        {renderTileChild(5, {h:8, m:0, s:0, add:150})}
+        {renderTileChild(6, {h:8, m:0, s:0, add:180})}
+        {renderTileChild(7, {h:8, m:0, s:0, add:210})}
       </div>
 
-      <div className="tile is-2 is-vertical is-parent has-text-centered is-size-7 has-text-weight-medium">
-        <div className="tile is-child box is-clickable">
-          <div className="content">
-            <p>12:00 p.m. - 12:30 p.m.</p>
-          </div>
-        </div>
-        <div className="tile is-child box is-clickable">
-          <div className="content">
-            <p>12:30 p.m. - 1:00 p.m.</p>
-          </div>
-        </div>
-        <div className="tile is-child box is-clickable">
-          <div className="content">
-            <p>1:00 p.m. - 1:30 p.m.</p>
-          </div>
-        </div>
-        <div className="tile is-child box is-clickable">
-          <div className="content">
-            <p>1:30 p.m. - 2:00 p.m.</p>
-          </div>
-        </div>
+      <div className="tile is-2 is-vertical is-parent has-text-centered">
+        {renderTileChild(8, {h:8, m:0, s:0, add:240})}
+        {renderTileChild(9, {h:8, m:0, s:0, add:270})}
+        {renderTileChild(10, {h:8, m:0, s:0, add:300})}
+        {renderTileChild(11, {h:8, m:0, s:0, add:330})}
       </div>
 
-      <div className="tile is-2 is-vertical is-parent has-text-centered is-size-7 has-text-weight-medium">
-        <div className="tile is-child box is-clickable">
-          <div className="content">
-            <p>2:00 p.m. - 2:30 p.m.</p>
-          </div>
-        </div>
-        <div className="tile is-child box is-clickable">
-          <div className="content">
-            <p>2:30 p.m. - 3:00 p.m.</p>
-          </div>
-        </div>
-        <div className="tile is-child box is-clickable">
-          <div className="content">
-            <p>3:00 p.m. - 3:30 p.m.</p>
-          </div>
-        </div>
-        <div className="tile is-child box is-clickable">
-          <div className="content">
-            <p>3:30 p.m. - 4:00 p.m.</p>
-          </div>
-        </div>
-
+      <div className="tile is-2 is-vertical is-parent has-text-centered">
+        {renderTileChild(12, {h:8, m:0, s:0, add:360})}
+        {renderTileChild(13, {h:8, m:0, s:0, add:390})}
+        {renderTileChild(14, {h:8, m:0, s:0, add:420})}
+        {renderTileChild(15, {h:8, m:0, s:0, add:450})}
       </div>
 
-      <div className="tile is-2 is-vertical is-parent has-text-centered is-size-7 has-text-weight-medium">
-        <div className="tile is-child box is-clickable">
-          <div className="content">
-            <p>4:00 p.m. - 4:30 p.m.</p>
-          </div>
-        </div>
-        <div className="tile is-child box is-clickable">
-          <div className="content">
-            <p>4:30 p.m. - 5:00 p.m.</p>
-          </div>
-        </div>
-        <div className="tile is-child box is-clickable">
-          <div className="content">
-            <p>5:00 p.m. - 5:30 p.m.</p>
-          </div>
-        </div>
-        <div className="tile is-child box is-clickable">
-          <div className="content">
-            <p>5:30 p.m. - 6:00 p.m.</p>
-          </div>
-        </div>
+      <div className="tile is-2 is-vertical is-parent has-text-centered">
+        {renderTileChild(16, {h:8, m:0, s:0, add:480})}
+        {renderTileChild(17, {h:8, m:0, s:0, add:510})}
+        {renderTileChild(18, {h:8, m:0, s:0, add:540})}
+        {renderTileChild(19, {h:8, m:0, s:0, add:570})}
       </div>
 
-      <div className="tile is-2 is-vertical is-parent has-text-centered is-size-7 has-text-weight-medium">
-        <div className="tile is-child box is-clickable">
-          <div className="content">
-            <p>6:00 p.m. - 6:30 p.m.</p>
-          </div>
-        </div>
-        <div className="tile is-child box is-clickable">
-          <div className="content">
-            <p>6:30 p.m. - 7:00 p.m.</p>
-          </div>
-        </div>
-        <div className="tile is-child box is-clickable">
-          <div className="content">
-            <p>7:00 p.m. - 7:30 p.m.</p>
-          </div>
-        </div>
-        <div className="tile is-child box is-clickable">
-          <div className="content">
-            <p>7:30 p.m. - 8:00 p.m.</p>
-          </div>
-        </div>
+      <div className="tile is-2 is-vertical is-parent has-text-centered">
+        {renderTileChild(20, {h:8, m:0, s:0, add:600})}
+        {renderTileChild(21, {h:8, m:0, s:0, add:630})}
+        {renderTileChild(22, {h:8, m:0, s:0, add:660})}
+        {renderTileChild(23, {h:8, m:0, s:0, add:690})}
       </div>
     </div>
   );
 }
 
-export default Tile;
+export default Tiles;

@@ -5,7 +5,7 @@ import './footer.css';
  */
 function Footer() {
   return (
-    <footer className="footer py-5">
+    <footer className="footer py-6">
       <div className="content has-text-centered">
         <p>
           <strong>Selector Básico de Recursos</strong> por <a href="https://twitter.com/_kimael_">Maikel Carballo</a>.
