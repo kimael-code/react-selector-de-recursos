@@ -1,70 +1,77 @@
-# Getting Started with Create React App
+# Selector Simple de Recursos
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Web App (demostrativa) para asignar y desasignar, a distintos elementos, recursos disponibles.
 
-## Available Scripts
+## Tabla de Contenidos
 
-In the project directory, you can run:
+1. [Construido con](#construido-con)
+2. [Primeros Pasos](#primeros-pasos)
+3. [Uso](#uso)
+4. [Contribuir](#contribuir)
+5. [Licencia](#licencia)
+6. [Contacto](#contacto)
+7. [Agradecimientos](#agradecimientos)
 
-### `npm start`
+## Construido con
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+* [Node.js](https://nodejs.org/)
+* [React](https://reactjs.org/) mediante [Create React App](https://github.com/facebook/create-react-app)
+* [Bulma](https://bulma.io/)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Primeros Pasos
 
-### `npm test`
+### Quiero la App
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Descargue la última versión del archivo comprimido ZIP [selector-de-recursos-compilado-v*](https://github.com/kimael-code/react-selector-de-recursos/releases).
 
-### `npm run build`
+2. Finalizada la descarga, descomprima el archivo.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+3. Diríjase a la carpeta descomprimida (por defecto es `build`) y abra `index.html` con un navegador web.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Quiero el Código Fuente
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Clone el repositorio
 
-### `npm run eject`
+   ```sh
+   git clone https://github.com/kimael-code/react-selector-de-recursos.git
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+2. Instale las dependencias
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+   ```sh
+   npm install
+   ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+3. Ejecute la app con
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+    ```sh
+    npm start
+    ```
 
-## Learn More
+4. Abra la url `http://localhost:3000` en un navegador web
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Uso
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Haga clic en las fichas horarias para comenzar a asignar/desasignar los ocho (8) recursos disponibles.
 
-### Code Splitting
+## Contribuir
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Las contribuciones hacen que la comunidad de código abierto sea un lugar tan increíble para aprender, inspirar y crear. Cualquier contribución que haga es **muy apreciada**.
 
-### Analyzing the Bundle Size
+1. Clone el proyecto
+2. Cree su rama contrib (`git checkout -b contrib/NuevaFuncionalidad`)
+3. Confirme sus cambios (`git commit -m 'Agrega la nueva funcionalidad'`)
+4. Ejecute un Push a la rama (`git push origin contrib/NuevaFuncionalidad`)
+5. Abra una petición de fusión (Merge)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Licencia
 
-### Making a Progressive Web App
+Se distribuye bajo licencia `MIT`. Para más información lea el archivo `LICENSE`.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Contacto
 
-### Advanced Configuration
+Maikel Carballo - [Twitter](https://twitter.com/_kimael_)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Agradecimientos
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[Nicolás Schürmann](https://twitter.com/_nasch_) por la idea de la app.
